@@ -9,3 +9,13 @@ function multipliedArray(array = []) {
 }
 
 console.log(multipliedArray([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+
+// arrow
+
+function multipliedArray(array = []) {
+  let newArray = array.filter((item) => (item % 2));
+  let multipliedArray = newArray.map((item) => (item * newArray.length));
+  return multipliedArray;
+}
+
+console.log(multipliedArray([1, 2, 3, 4, 5, 6, 7, 8, 9]));
