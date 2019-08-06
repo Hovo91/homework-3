@@ -7,7 +7,6 @@ function checkArray(array = []) {
     return 'No negatives';
     };
     let arrayWithNegs = checkArray.map((item) => item.filter((item) => item < 0));
-    // console.log(arrayWithNegs);
     let arrayWithMaxNeg = arrayWithNegs.map((item) => item.length === 0 ? item.push(1) : item.reduce((min, item) => min > item ? min : item));
   return arrayWithMaxNeg.reduce((product, elem) => product * elem);
 }
